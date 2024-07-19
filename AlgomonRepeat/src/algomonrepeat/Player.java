@@ -63,5 +63,9 @@ class Player {
             System.out.println(name + " swaps to " + activeCharacter.getName() + " due to defeat.");
         }
     }
+
+    String getName() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }
