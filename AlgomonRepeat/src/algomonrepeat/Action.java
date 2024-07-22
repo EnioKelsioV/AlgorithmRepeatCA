@@ -9,11 +9,9 @@ package algomonrepeat;
  * @author eniomagalhaes
  */
 
-//Action interface for different characteractions
+//Action interface for different 
 public interface Action {
     void execute(Player player, Player opponent);
-
-    public void execute(Player currentPlayer, Player opponent);
 }
 
 // Attack action implementation
@@ -26,6 +24,7 @@ public class AttackAction implements Action {
 
 // Defend action implementation
 public class DefendAction implements Action {
+
     @Override
     public void execute(Player player, Player opponent) {
         player.getActiveCharacter().defend();
@@ -34,6 +33,7 @@ public class DefendAction implements Action {
 
 // Inhibit action implementation
 public class InhibitAction implements Action {
+
     @Override
     public void execute(Player player, Player opponent) {
         player.getActiveCharacter().inhibit(opponent.getActiveCharacter());
@@ -42,7 +42,7 @@ public class InhibitAction implements Action {
 
 // Swap action implementation
 public class SwapAction implements Action {
-    private int index;
+    private final int index;
 
     // Constructor to specify which character to swap to
     public SwapAction(int index) {
